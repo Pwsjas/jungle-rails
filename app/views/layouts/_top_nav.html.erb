@@ -46,6 +46,24 @@
         </li> %>
       </ul>
       <ul class="navbar-nav">
+
+        <% if current_user %>
+          <li class="nav-item end-0 nav-link">
+            Signed in as <%= current_user.name %>
+          </li>
+          <li class="nav-item end-0 nav-link">
+            <%= link_to 'Logout', '/logout' %>
+          </li>
+        <% else %>
+          <li class="nav-item end-0 nav-link">
+            <%= link_to 'Login', '/login' %>
+          </li>
+          <li class="nav-item end-0 nav-link">
+            <%= link_to 'Register', '/register' %>
+          </li>
+        <% end %>
+
+
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle text-danger"
