@@ -52,7 +52,7 @@
             Signed in as <%= current_user.name %>
           </li>
           <li class="nav-item end-0 nav-link">
-            <%= link_to 'Logout', '/logout' %>
+            <%= link_to "Logout", '/logout', data: { turbolinks: false } %>
           </li>
         <% else %>
           <li class="nav-item end-0 nav-link">
