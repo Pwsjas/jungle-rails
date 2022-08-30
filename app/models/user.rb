@@ -14,10 +14,20 @@ class User < ApplicationRecord
 
   validates :password, confirmation: true
 
+  def self.authenticate_with_credentials(email, password)
+    email = email.to_s
+    email = email.strip
+    user = User.find_by_email(email)
+    return user if user && user.authenticate(password)
+
+    nil
+  end
+
   private
 
   def cleanup_email
     self.email = email.downcase if email.present?
     self.email = email.strip if email.present?
   end
+
 end

@@ -57,4 +57,38 @@ RSpec.describe User, type: :model do
     end
 
   end
+
+  describe '.authenticate_with_credentials' do
+   
+    before(:all) do
+      User.create({name: 'test', email: "a@b", password: 'testtest', password_confirmation: 'testtest'})
+      @user = User.find_by_email('a@b')
+    end
+
+    it "will return nil if there is no email" do
+      user = User.authenticate_with_credentials(nil, 'testtest')
+      expect(user).to eq(nil)
+    end
+
+    it "will return nil if there is no password" do
+      user = User.authenticate_with_credentials('a@b', nil)
+      expect(user).to eq(nil)
+    end
+
+    it "will return the user if passed valid credentials" do
+      user = User.authenticate_with_credentials("a@b", 'testtest')
+      expect(user).to eq(@user)
+    end
+
+    it "will return the user if passed valid poorly input credentials" do
+      user = User.authenticate_with_credentials("  a@b ", 'testtest')
+      expect(user).to eq(@user)
+    end
+
+    it "will return nill if passed invalid credentials" do
+      user = User.authenticate_with_credentials("tewalinwatg", "klnteqtgoeq")
+      expect(user).to eq(nil)
+    end
+
+  end
 end
