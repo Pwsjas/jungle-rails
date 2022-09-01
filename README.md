@@ -8,15 +8,15 @@ Jungle allows users to register, login / lougout, view products, sort by categor
 
 Various products, each with on-hover effects, and a state for items which are sold out.
 
-!["Screenshot of the product's page, showing various products"]()
+!["Screenshot of the product's page, showing various products"](https://github.com/Pwsjas/jungle-rails/blob/master/docs/products.png?raw=true)
 
 Details on items currently in the user's shopping card, including price, description, and a stripe checkout button.
 
-!["Screenshot of a shopping-cart page"]()
+!["Screenshot of a shopping-cart page"](https://github.com/Pwsjas/jungle-rails/blob/master/docs/shopping-cart.png?raw=true)
 
 A simple login form, with encrypted user authentication
 
-!["Screenshot of a login form"]()
+!["Screenshot of a login form"](https://github.com/Pwsjas/jungle-rails/blob/master/docs/login.png?raw=true)
 
 ## Setup
 
