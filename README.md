@@ -1,6 +1,22 @@
 # Jungle
 
-A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.  With additions such as user authentication, category creation, and various UI / user experience improvements.
+
+## Final Product
+
+Jungle allows users to register, login / lougout, view products, sort by category, view their cart, and checkout.
+
+Various products, each with on-hover effects, and a state for items which are sold out.
+
+!["Screenshot of the product's page, showing various products"]()
+
+Details on items currently in the user's shopping card, including price, description, and a stripe checkout button.
+
+!["Screenshot of a shopping-cart page"]()
+
+A simple login form, with encrypted user authentication
+
+!["Screenshot of a login form"]()
 
 ## Setup
 
@@ -19,9 +35,7 @@ If Rails is complaining about authentication to the database, uncomment the user
 
 ## Stripe Testing
 
-Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
-
-More information in their docs: <https://stripe.com/docs/testing#cards>
+Use mock credit cards from: <https://stripe.com/docs/testing#cards> to simulate successful checkouts.
 
 ## Dependencies
 
